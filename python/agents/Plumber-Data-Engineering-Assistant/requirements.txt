@@ -1,0 +1,14 @@
+beautifulsoup4
+dbt-bigquery
+fastapi
+GitPython
+google-adk
+google-api-python-client
+google-cloud-monitoring
+google-cloud-dataflow
+google-cloud-storage
+google-generativeai
+Pillow
+python-dotenv
+requests
+apache-beam[gcp]

@@ -32,6 +32,7 @@ To learn more, check out the [ADK Documentation](https://google.github.io/adk-do
 │   │   ├── data-science
 │   │   ├── financial-advisor
 │   │   ├── fomc-research
+│   │   ├── Plumber-Data-Engineering-Assistant
 │   │   ├── gemini-fullstack
 │   │   ├── google-trends-agent
 │   │   ├── image-scoring
