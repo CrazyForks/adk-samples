@@ -81,24 +81,25 @@ other models for these samples.
 │   └── README.md               # This file (Repository overview)
 ```
 
+## Local Contributor Pre-Check
+
+Before submitting a Pull Request with changes to Python files, please run the following script locally to quickly validate your changes against our standards.
+
+1.  Ensure you have **Python** installed and the script is executable (`chmod +x python-checks.sh`).
+2.  Run the check script from the repository root using the **`check`** action, specifying the specific **agent directory** or **notebook directory** you modified.
+
+| Purpose | Command |
+| :--- | :--- |
+| **Run all checks** on a single agent directory | `./python-checks.sh check --agent agent_directory_name all` |
+| **Run only `flake8`** on a single agent directory | `./python-checks.sh check --agent agent_directory_name flake8` |
+| **Run only `black` and `isort`** on a specific notebook directory | `./python-checks.sh check --notebook notebook_directory_name black isort` |
+| **Get detailed usage and options** | `./python-checks.sh help` |
+
+> **Note:** The script requires you to specify the folder name you are working in (e.g., `academic-research` inside the `agents` directory). This prevents accidental checks on the entire repository.
+
 ## 📝 Code Quality Checks
 
 We use automated checks to ensure high quality and consistency across all code samples.
-
-### 🐍 Python Contributor Pre-Check
-
-Before submitting a Pull Request with changes to Python files (in `python/agents` or `python/notebooks`), please run the following script locally to catch any formatting or linting errors:
-
-1. Ensure you have Python installed.
-2. Run the check script from the repository root:
-
-```bash
-./python-checks.sh --run # run all checks
-./python-checks.sh --run all # run all checks
-./python-checks.sh --run black # run black only
-./python-checks.sh --run isort flake8 # run isort and flake8
-./python-checks.sh --help # for more info
-```
 
 This script will run `black`, `isort` and `flake8` to check for formatting and linting errors.
 
